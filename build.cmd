@@ -235,7 +235,9 @@ git clone https://gitlab.freedesktop.org/mesa/mesa.git mesa-%MESA_VERSION%
 REM 2025-11-03:
 REM git -C mesa-%MESA_VERSION% checkout 629a0a4dccd588feb37aa445087386e07aba3f93
 REM 2025-10-21:
-git -C mesa-%MESA_VERSION% checkout 7a30a71c457c54839315f320737225e1a2ac0a91
+REM git -C mesa-%MESA_VERSION% checkout 7a30a71c457c54839315f320737225e1a2ac0a91
+REM 2025-10-01:
+git -C mesa-%MESA_VERSION% checkout 42a78a1aae19f855b049462d7714cd1f07ca12e4
 
 curl.exe -sfL https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/38029.patch | git.exe apply --directory=mesa-%MESA_VERSION% || exit /b 1
 
