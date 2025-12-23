@@ -228,7 +228,12 @@ rem *** download mesa source ***
 
 rd /s /q mesa-%MESA_VERSION% 1>nul 2>nul
 
-call :get "https://archive.mesa3d.org/mesa-%MESA_VERSION%.tar.xz" "mesa-%MESA_VERSION%" "%MESA_SHA256%" || exit /b 1
+REM call :get "https://archive.mesa3d.org/mesa-%MESA_VERSION%.tar.xz" "mesa-%MESA_VERSION%" "%MESA_SHA256%" || exit /b 1
+
+git clone https://gitlab.freedesktop.org/mesa/mesa.git mesa-%MESA_VERSION%
+
+REM 2025-11-03
+git -C mesa-%MESA_VERSION% checkout 629a0a4dccd588feb37aa445087386e07aba3f93
 
 curl.exe -sfL https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/38029.patch | git.exe apply --directory=mesa-%MESA_VERSION% || exit /b 1
 
