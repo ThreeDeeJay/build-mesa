@@ -232,14 +232,16 @@ REM call :get "https://archive.mesa3d.org/mesa-%MESA_VERSION%.tar.xz" "mesa-%MES
 
 git clone https://gitlab.freedesktop.org/mesa/mesa.git mesa-%MESA_VERSION%
 
-REM 2025-11-03:
-REM git -C mesa-%MESA_VERSION% checkout 629a0a4dccd588feb37aa445087386e07aba3f93
-REM 2025-10-21:
-REM git -C mesa-%MESA_VERSION% checkout 7a30a71c457c54839315f320737225e1a2ac0a91
-REM 2025-10-07:
-git -C mesa-%MESA_VERSION% checkout d3d820d6ef24100515b342041dfa35b14de9d545
 REM ~~~~~~~~~~~~~2025-10-01:
 REM ~~~~~~~~~~~~~git -C mesa-%MESA_VERSION% checkout 42a78a1aae19f855b049462d7714cd1f07ca12e4
+REM 2025-10-10:
+git -C mesa-%MESA_VERSION% checkout f8729ee92002d74553c1d5938937898a7334b863
+REM 2025-10-21:
+REM git -C mesa-%MESA_VERSION% checkout 7a30a71c457c54839315f320737225e1a2ac0a91
+REM 2025-11-03:
+REM git -C mesa-%MESA_VERSION% checkout 629a0a4dccd588feb37aa445087386e07aba3f93
+REM 2025-11-07:
+REM git -C mesa-%MESA_VERSION% checkout d3d820d6ef24100515b342041dfa35b14de9d545
 
 curl.exe -sfL https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/38029.patch | git.exe apply --directory=mesa-%MESA_VERSION% || exit /b 1
 
