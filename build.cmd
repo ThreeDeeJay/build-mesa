@@ -238,8 +238,10 @@ REM ~~~~~~~~~~~~~2025-10-10:
 REM ~~~~~~~~~~~~~git -C mesa-%MESA_VERSION% checkout f8729ee92002d74553c1d5938937898a7334b863
 REM ~~~~~~~~~~~~~2025-10-11:
 REM ~~~~~~~~~~~~~git -C mesa-%MESA_VERSION% checkout bbdd688bc5716d38edc688a0bae644592c33d51e
+REM ~~~~~~~~~~~~~2025-10-14:
+REM ~~~~~~~~~~~~~-C mesa-%MESA_VERSION% checkout 142079759bec8f63b9d2c3a19e3f874469cbd464
 REM 2025-10-14:
-git -C mesa-%MESA_VERSION% checkout 142079759bec8f63b9d2c3a19e3f874469cbd464
+git -C mesa-%MESA_VERSION% checkout 859505d95abe001993ea77c19188d9b1bf185328
 REM 2025-10-15:
 REM git -C mesa-%MESA_VERSION% checkout 8a758fd38a85150834b03136f3fd66d05f65b947
 REM 2025-10-21:
