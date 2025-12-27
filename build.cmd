@@ -273,8 +273,19 @@ REM git -C mesa-%MESA_VERSION% checkout 629a0a4dccd588feb37aa445087386e07aba3f93
 REM 2025-11-07:
 REM git -C mesa-%MESA_VERSION% checkout d3d820d6ef24100515b342041dfa35b14de9d545
 
-REM 2025-10-01:
-git -C mesa-%MESA_VERSION% checkout 42a78a1aae19f855b049462d7714cd1f07ca12e4
+
+
+
+
+REM 2025-10-15:
+git -C mesa-%MESA_VERSION% checkout 95579b7af6a38267f8234bbb63580106c6a0eb72
+
+REM ----------2025-10-01:
+REM ----------git -C mesa-%MESA_VERSION% checkout 42a78a1aae19f855b049462d7714cd1f07ca12e4
+
+
+
+
 
 curl.exe -sfL https://gitlab.freedesktop.org/mesa/mesa/-/commit/ae75b59cb526eff5de906726b105e33258a283cf.patch | git.exe apply --directory=mesa-%MESA_VERSION% || exit /b 1
 
