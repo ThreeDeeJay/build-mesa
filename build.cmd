@@ -259,8 +259,8 @@ REM ~~~~~~~~~~~~~git -C mesa-%MESA_VERSION% checkout 681c734804b1dd251606792be41
 REM ~~~~~~~~~~~~~2025-10-14:
 REM ~~~~~~~~~~~~~git -C mesa-%MESA_VERSION% checkout 7b222d532ba8a17b45f032053f6e770e90a180e8
 
-REM 2025-10-14:
-git -C mesa-%MESA_VERSION% checkout ae75b59cb526eff5de906726b105e33258a283cf
+REM +++++++++++++2025-10-14:
+REM +++++++++++++git -C mesa-%MESA_VERSION% checkout ae75b59cb526eff5de906726b105e33258a283cf
 
 REM 2025-10-14:
 REM git -C mesa-%MESA_VERSION% checkout 993f5c9e30b9a3ad4f63bbbe358c61f12077cdc4
@@ -272,6 +272,11 @@ REM 2025-11-03:
 REM git -C mesa-%MESA_VERSION% checkout 629a0a4dccd588feb37aa445087386e07aba3f93
 REM 2025-11-07:
 REM git -C mesa-%MESA_VERSION% checkout d3d820d6ef24100515b342041dfa35b14de9d545
+
+REM 2025-10-01:
+git -C mesa-%MESA_VERSION% checkout 42a78a1aae19f855b049462d7714cd1f07ca12e4
+
+curl.exe -sfL https://gitlab.freedesktop.org/mesa/mesa/-/commit/ae75b59cb526eff5de906726b105e33258a283cf.patch | git.exe apply --directory=mesa-%MESA_VERSION% || exit /b 1
 
 curl.exe -sfL https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/38029.patch | git.exe apply --directory=mesa-%MESA_VERSION% || exit /b 1
 
